@@ -12,6 +12,10 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.post('/submit-comment', (req, res) => {
+    console.log(req.body); 
+    res.send("ok"); 
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -37,3 +41,29 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// This handles the form submission from your Comments page
+app.post('/submit-comment', (req, res) => {
+    const { username, commentText } = req.body;
+
+    // 1. SERVER-SIDE VALIDATION
+    // Check if the fields are empty or if the comment is too long (max 500 chars)
+    if (!username || !commentText || commentText.trim() === "") {
+        return res.status(400).send("Oops! Both name and comment are required.");
+    }
+
+    if (commentText.length > 500) {
+        return res.status(400).send("That's a long story! Please keep comments under 500 characters.");
+    }
+
+    // 2. TIMESTAMPS
+    const timestamp = new Date().toLocaleString(); // Generated on the server
+
+    // 3. LOGGING (For now, we just log it. Later, we'll send it to the Database)
+    console.log(`New Comment from ${username} at ${timestamp}: ${commentText}`);
+
+    // 4. SUCCESS RESPONSE
+    res.send(`<h1>Thanks, ${username}!</h1><p>Your comment was received at ${timestamp}.</p><a href="/MAIN_workspace/comments.html">Go Back</a>`);
+});
+
+

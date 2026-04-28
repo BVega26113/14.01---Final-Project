@@ -15,8 +15,62 @@
     border-bottom: 5px solid #F7C64A;
 }
 .header-style p {
-    font-size: 7rem;
+    font-size: 1.2rem;
     margin: 10px 0 0 0;
+}
+
+/* Customer Review */
+.comment-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #10291D;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D3D4;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    resize: none; 
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.btn-submit {
+    background-color: #10291D;
+    color: #F7F7F7;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #F7C64A;
+    color: #10291D;
 }
 
 body {
