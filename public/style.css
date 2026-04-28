@@ -5,6 +5,20 @@
     padding: 20px;
 }
 
+.header-style {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #F7F7F7;  
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #10291D;
+    border-bottom: 5px solid #F7C64A;
+}
+.header-style p {
+    font-size: 7rem;
+    margin: 10px 0 0 0;
+}
+
 body {
     font-family: 'Montserrat', sans-serif; /* Primary header and body text */
     background-color: #F7F7F7;
