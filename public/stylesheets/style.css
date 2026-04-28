@@ -1,8 +1,27 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-a {
-  color: #00B7FF;
+body {
+    font-family: 'Montserrat', sans-serif; /* Primary header and body text */
+    margin: 0;
+}
+
+h1, .brand-title {
+    font-family: 'Italianno', cursive; /* Reserved for company title/decorative elements*/
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6; 
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    color: #666;
 }
