@@ -13,7 +13,7 @@ Downtown Donuts is a responsive, full-stack web application designed for a local
 
 ```bash
 git clone [https://github.com/BVega26113/14.01---Final-Project]
-cd [Downtown-Donuts]
+cd [14.01---Final-Project]
 ```
 
 ## Database Setup
@@ -22,8 +22,13 @@ To set up the database, run the install_db.sh script in the setup_scripts direct
 
 ```bash
 ./setup_scripts/install_db.sh
-sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
 ```
+
+## Create the initial tables by running the following command
+
+     ```bash
+    sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
+    ```
 
 ## Install Dependencies
 
