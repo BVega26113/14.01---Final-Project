@@ -115,12 +115,12 @@ body {
 
 .menu-item h3 {
     margin: 0;
-    color: #2c3e50; /* Adjust to your brand color */
+    color: #000000; 
 }
 
 .price {
     font-weight: bold;
-    color: #d35400; /* Adjust to your brand color */
+    color: #000000; 
 }
 
 /* Coffee Table Styling */
@@ -165,16 +165,13 @@ footer {
     height: auto;    
 }
 
-/* 1. Make the container a Grid */
 #comments-placeholder {
     display: grid;
-    /* This creates as many columns as fit on the screen */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Space between the cards */
+    gap: 20px;
     padding: 20px;
 }
 
-/* 2. Style the individual cards so they look like distinct blocks */
 .comment-item {
     background: #fdfdfd;
     border: 1px solid #ddd;
@@ -182,6 +179,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 
 /* Mobile Screen*/
 @media (max-width: 768px) {
