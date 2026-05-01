@@ -99,6 +99,42 @@ body {
     color: #10291D;
 }
 
+/* Responsive Grid for Menu Items */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Styling the Menu Items */
+.menu-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.menu-item h3 {
+    margin: 0;
+    color: #2c3e50; /* Adjust to your brand color */
+}
+
+.price {
+    font-weight: bold;
+    color: #d35400; /* Adjust to your brand color */
+}
+
+/* Coffee Table Styling */
+.coffee-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.coffee-table th, .coffee-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
 body {
     font-family: 'Montserrat', sans-serif; /* Primary header and body text */
     background-color: #F7F7F7;
