@@ -40,7 +40,18 @@
         </div>
     </main>
 
-    <iframe name="v_frame" style="display:none;" onload="if(this.contentWindow.location.href.includes('submit-comment')){ alert('Review Received!'); document.getElementById('reviewForm').reset(); }"></iframe>
+    <section id="comments-list">
+            <h2>Recent Comments</h2>
+            <div id="comments-placeholder">
+                <p>Loading comments...</p>
+            </div>
+        </section>
+
+        <nav class="pagination" aria-label="Comment pagination">
+            <a href="/comments?page=1">1</a>
+            <a href="/comments?page=2">2</a>
+        </nav>
+    </main>
 
     <footer>
         <p>&copy; 2026 Downtown Donuts. All rights reserved.</p>
