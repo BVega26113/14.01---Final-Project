@@ -188,11 +188,9 @@ footer {
         overflow-x: hidden !important;
         margin: 0 !important;
         padding: 0 !important;
-        position: relative !important;
     }
 
     .container, 
-    .header-style, 
     .comment-form-container, 
     .hero, 
     .features,
@@ -211,5 +209,9 @@ footer {
         overflow-wrap: break-word !important;
         display: inline-block; 
         max-width: 100% !important;
+    }
+
+    img[alt="Downtown Donuts Logo"] {
+        display: none !important;
     }
 }
