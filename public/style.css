@@ -165,6 +165,24 @@ footer {
     height: auto;    
 }
 
+/* 1. Make the container a Grid */
+#comments-placeholder {
+    display: grid;
+    /* This creates as many columns as fit on the screen */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between the cards */
+    padding: 20px;
+}
+
+/* 2. Style the individual cards so they look like distinct blocks */
+.comment-item {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Mobile Screen*/
 @media (max-width: 768px) {
     html, body {
