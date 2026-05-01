@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const createError = require('http-errors');
 const { dbMiddleware } = require('./bin/db');
-
 const indexRouter = require('./routes/index');
 
 const app = express();
@@ -31,7 +30,7 @@ let comments = [];
 
 app.get('/api/comments', (req, res) => {
     const page = parseInt(req.query.page) || 1; 
-    const limit = 5; // Number of comments per page
+    const limit = 5; 
     
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
@@ -42,11 +41,29 @@ app.get('/api/comments', (req, res) => {
 });
 
 app.post('/api/comments', (req, res) => {
-    const { username, commentText } = req.body;
+    let { username, commentText } = req.body;
+
     if (!username || !commentText) {
         return res.status(400).json({ error: "Missing fields" });
     }
-    const newComment = { username, commentText, timestamp: new Date().toLocaleString() };
+
+    username = username.trim();
+    commentText = commentText.trim();
+
+    if (username === "" || commentText === "") {
+        return res.status(400).json({ error: "Input cannot be empty" });
+    }
+
+    if (commentText.length > 500) {
+        return res.status(400).json({ error: "Comment too long (max 500 characters)" });
+    }
+
+    const newComment = { 
+        username, 
+        commentText, 
+        timestamp: new Date().toISOString() 
+    };
+    
     comments.push(newComment);
     res.status(201).json(newComment);
 });
